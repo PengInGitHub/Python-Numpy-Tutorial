@@ -27,16 +27,12 @@ for animal, legs in d.items():
 #dict comprehensions
 nums = [0, 1, 2, 3, 4]
 even_num_to_square = {x : x**2 for x in nums if x%2==0}
-print(even_num_to_square)
 
 #Sets
 animals = {'cat', 'dog'}
-print('car' in animals)
-print(len(animals))
+
 animals.remove('cat')
-print(len(animals))
 animals.add('camel') 
-print(len(animals))
 
 #sets are unorded
 animals = {'cat', 'dog', 'camel'}
@@ -46,15 +42,12 @@ for id, animal in enumerate(animals):
 #set comprehensions
 from math import sqrt
 nums = {sqrt(x) for x in range(30)}
-print(nums)
 
 #Tuples
 #A tuple is an (immutable) ordered list of values
 #tuples can be used as keys in dictionaries and as elements of sets
 d = {(x,x+1): x for x in range(10)}
 t=(5,6)
-print(d[t])
-print(d[(1,2)])
 
 
 #--- Functions --- #
@@ -116,54 +109,42 @@ g.greet(loud=True)
 
 import numpy as np
 a = np.array([1,2,3])
-print(a.shape)
-print(a[0],a[1],a[2])
 a[0]=5
-print(a)
 
 b = np.array([[1,2,3],[4,5,6]])
-print(b.shape)
-print(b[0,0],b[0,1],b[1,0])
-print(b)
 
 #functions to create arrays
 #Numpy also provides many functions to create arrays
 
 #array filled with zero
 a = np.zeros((2,2))
-print(a)
 b = np.zeros((1,2))
-print(b)
 
 #constant array
 c = np.full((5,2),7)
-print(c)
 
 #identity matrix
 d = np.eye(3)
-print(d)
 
 #array filled with one
 e = np.ones((2,2,2))
-print(e)
 
 #array filled with random values
 f = np.random.random((2,3,4))
-print(f)
-
 
 #Array indexing
+#Slicing
+#Since arrays may be multidimensional, you must specify a slice for each dimension of the array
+a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+b = a[:2,:]
 
+#modify the value in slice will change the value in original array 
+b[0,0] = 432
 
-
-
-
-
-
-
-
-
-
+#create rank 2 array with shape (3,4)
+a = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
+row_r1 = a[1,:] 
+row_r2 = a[1:2, :]
 
 
 
