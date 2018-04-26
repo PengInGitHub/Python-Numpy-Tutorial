@@ -145,6 +145,23 @@ b[0,0] = 432
 a = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
 row_r1 = a[1,:] 
 row_r2 = a[1:2, :]
+print(row_r2, row_r2.shape)
+
+a = np.array([[1,2], [3, 4], [5, 6]])
+#a[[0, 1, 2], [0, 1, 0]] = np.array([a[0, 0], a[1, 1], a[2, 0]])
+#a[[0,0],[1,1]] = np.array(a[0,1],a[0,1])
+
+a = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+b = np.array([0, 2, 0, 1])
+a[np.arange(4), b] += 10
+print(a)
+
+#Boolean array indexing
+bool_idx = (a>2)
+print(bool_idx)
+
+
+
 
 
 
